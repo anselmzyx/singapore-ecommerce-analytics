@@ -1,9 +1,5 @@
 # Singapore E-commerce Marketplace & Pricing Analytics (Shopee)
 
-A graduate Data Analyst portfolio project. I built a pipeline covering acquisition, data
-cleaning, SQL business analysis, and a two-page Power BI dashboard, using a curated
-sample of Shopee Singapore product listings.
-
 ## Project overview and objectives
 
 For this project, I analysed a sample of Shopee Singapore product listings to
