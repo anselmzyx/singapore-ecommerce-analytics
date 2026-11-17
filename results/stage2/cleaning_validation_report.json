@@ -1,0 +1,75 @@
+{
+  "raw_file_checksum_verification": {
+    "SG_Category_Data_Mon_18_Aug_2025.xlsx": {
+      "stage1_sha256": "ba8c8cb8142dea8b5355796c7f20aa527e566505bc28bb5fc2f9681276a81003",
+      "current_sha256": "ba8c8cb8142dea8b5355796c7f20aa527e566505bc28bb5fc2f9681276a81003",
+      "unchanged": true
+    },
+    "SG_Keyword_Data_Mon_18_Aug_2025.xlsx": {
+      "stage1_sha256": "e4726104138d37c55603bc4feda8cd375cf64220afbd6a3b9d3665e804102406",
+      "current_sha256": "e4726104138d37c55603bc4feda8cd375cf64220afbd6a3b9d3665e804102406",
+      "unchanged": true
+    },
+    "SG_Store_Data_Mon_18_Aug_2025.xlsx": {
+      "stage1_sha256": "b9f7f229b8c5c3a1570175d3af6afb674e43af28cd4fe2cacad0295cab7cf006",
+      "current_sha256": "b9f7f229b8c5c3a1570175d3af6afb674e43af28cd4fe2cacad0295cab7cf006",
+      "unchanged": true
+    }
+  },
+  "n_physical_rows_combined": 14858,
+  "n_identifiable_observations": 2996,
+  "n_incomplete_rows_excluded": 11862,
+  "n_identifiable_by_view": {
+    "keyword": 999,
+    "store": 999,
+    "category": 998
+  },
+  "n_distinct_listing_keys": 2727,
+  "n_distinct_shops": 968,
+  "n_unique_listing_rows": 2727,
+  "reconciles_2996_identifiable": true,
+  "reconciles_2727_distinct_keys": true,
+  "reconciles_968_distinct_shops": true,
+  "reconciles_11862_incomplete_rows": true,
+  "reference_price_status_counts": {
+    "valid": 2684,
+    "sentinel_invalid": 312
+  },
+  "store_sentinel_neg1_count": 312,
+  "discount_consistency_status_counts": {
+    "consistent": 1921,
+    "no_recorded_discount": 543,
+    "invalid_or_missing_reference_price": 312,
+    "inconsistent": 220
+  },
+  "cross_view_price_conflicts": 9,
+  "n_listings_in_multiple_views": 63,
+  "variant_comparability_uncertain_count": 1091,
+  "price_exactly_999_count": 24,
+  "price_between_900_and_998_count": 0,
+  "store_parse_before_crawl_preserved_count": 39,
+  "numeric_conversion_failures": {
+    "price": 0,
+    "price_before_discount": 0,
+    "min_price": 0,
+    "max_price": 0,
+    "min_mrp": 0,
+    "max_mrp": 0,
+    "rating": 0,
+    "rating_count": 0,
+    "reviews_count": 0,
+    "reviews_image_count": 0,
+    "sold": 0,
+    "monthly_sold": 0,
+    "liked_count": 0,
+    "stock": 0,
+    "page_number": 0,
+    "rank": 0,
+    "videos_count": 0,
+    "category_id": 0
+  },
+  "datetime_conversion_failures": {
+    "crawl_time": 0,
+    "parse_time": 0
+  }
+}

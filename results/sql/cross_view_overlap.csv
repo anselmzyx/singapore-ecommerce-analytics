@@ -1,0 +1,8 @@
+views_present,distinct_listings
+store,977
+category,898
+keyword,789
+category+keyword,41
+category+store,16
+keyword+store,5
+category+keyword+store,1

@@ -1,0 +1,5 @@
+source_view,reference_price_status,n,pct_of_view
+category,valid,998,100.0
+keyword,valid,999,100.0
+store,sentinel_invalid,312,31.2
+store,valid,687,68.8

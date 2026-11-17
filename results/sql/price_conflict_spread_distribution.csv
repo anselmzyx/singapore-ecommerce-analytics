@@ -1,0 +1,5 @@
+spread_bucket,n_listings
+2-5%,2
+5-10%,3
+<2%,1
+>=10%,3

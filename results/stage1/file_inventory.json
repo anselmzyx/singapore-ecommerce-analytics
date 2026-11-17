@@ -1,0 +1,32 @@
+[
+  {
+    "view": "category",
+    "filename": "SG_Category_Data_Mon_18_Aug_2025.xlsx",
+    "size_bytes": 412133,
+    "sha256": "ba8c8cb8142dea8b5355796c7f20aa527e566505bc28bb5fc2f9681276a81003",
+    "sheet_names": [
+      "Sheet1"
+    ],
+    "n_sheets": 1
+  },
+  {
+    "view": "keyword",
+    "filename": "SG_Keyword_Data_Mon_18_Aug_2025.xlsx",
+    "size_bytes": 809641,
+    "sha256": "e4726104138d37c55603bc4feda8cd375cf64220afbd6a3b9d3665e804102406",
+    "sheet_names": [
+      "Sheet1"
+    ],
+    "n_sheets": 1
+  },
+  {
+    "view": "store",
+    "filename": "SG_Store_Data_Mon_18_Aug_2025.xlsx",
+    "size_bytes": 347185,
+    "sha256": "b9f7f229b8c5c3a1570175d3af6afb674e43af28cd4fe2cacad0295cab7cf006",
+    "sheet_names": [
+      "Sheet1"
+    ],
+    "n_sheets": 1
+  }
+]

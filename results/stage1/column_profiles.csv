@@ -1,0 +1,229 @@
+view,population,column,inferred_dtype,denominator_rows,missing_count,missing_pct,n_unique
+category,whole_workbook,language,text,998,0,0.0,1
+category,whole_workbook,page_number,integer-like (stored as text),998,0,0.0,3
+category,whole_workbook,rank,integer-like (stored as text),998,0,0.0,180
+category,whole_workbook,id,integer-like (stored as text),998,0,0.0,180
+category,whole_workbook,seed,empty,998,998,100.0,0
+category,whole_workbook,source_url,text,998,0,0.0,17
+category,whole_workbook,sponsored,integer-like (stored as text),998,0,0.0,1
+category,whole_workbook,url,text,998,0,0.0,956
+category,whole_workbook,videos_count,integer-like (stored as text),998,0,0.0,2
+category,whole_workbook,domain,text,998,0,0.0,1
+category,whole_workbook,flex_name,text,998,719,72.04,1
+category,whole_workbook,media,text,998,0,0.0,955
+category,whole_workbook,category_name,text,998,0,0.0,6
+category,whole_workbook,product_id,integer-like (stored as text),998,0,0.0,956
+category,whole_workbook,shop_id,integer-like (stored as text),998,0,0.0,482
+category,whole_workbook,title,text,998,0,0.0,938
+category,whole_workbook,currency,text,998,0,0.0,1
+category,whole_workbook,stock,integer-like (stored as text),998,0,0.0,692
+category,whole_workbook,crawl_time,text,998,0,0.0,17
+category,whole_workbook,parse_time,text,998,0,0.0,82
+category,whole_workbook,monthly_sold,integer-like (stored as text),998,0,0.0,476
+category,whole_workbook,sold,integer-like (stored as text),998,0,0.0,888
+category,whole_workbook,liked_count,integer-like (stored as text),998,0,0.0,548
+category,whole_workbook,category_id,integer-like (stored as text),998,0,0.0,3
+category,whole_workbook,brand,text,998,370,37.07,201
+category,whole_workbook,price,numeric (stored as text),998,0,0.0,612
+category,whole_workbook,price_before_discount,numeric (stored as text),998,0,0.0,492
+category,whole_workbook,min_price,numeric (stored as text),998,0,0.0,612
+category,whole_workbook,max_price,numeric (stored as text),998,0,0.0,659
+category,whole_workbook,min_mrp,numeric (stored as text),998,0,0.0,492
+category,whole_workbook,max_mrp,numeric (stored as text),998,0,0.0,528
+category,whole_workbook,discount,text,998,218,21.84,92
+category,whole_workbook,rating,numeric (stored as text),998,0,0.0,849
+category,whole_workbook,rating_count,integer-like (stored as text),998,0,0.0,702
+category,whole_workbook,reviews_image_count,integer-like (stored as text),998,0,0.0,490
+category,whole_workbook,reviews_count,integer-like (stored as text),998,0,0.0,533
+category,whole_workbook,isVirtualItem,text,998,0,0.0,1
+category,whole_workbook,isSaleItemVerified,text,998,0,0.0,1
+category,identifiable_rows,language,text,998,0,0.0,1
+category,identifiable_rows,page_number,integer-like (stored as text),998,0,0.0,3
+category,identifiable_rows,rank,integer-like (stored as text),998,0,0.0,180
+category,identifiable_rows,id,integer-like (stored as text),998,0,0.0,180
+category,identifiable_rows,seed,empty,998,998,100.0,0
+category,identifiable_rows,source_url,text,998,0,0.0,17
+category,identifiable_rows,sponsored,integer-like (stored as text),998,0,0.0,1
+category,identifiable_rows,url,text,998,0,0.0,956
+category,identifiable_rows,videos_count,integer-like (stored as text),998,0,0.0,2
+category,identifiable_rows,domain,text,998,0,0.0,1
+category,identifiable_rows,flex_name,text,998,719,72.04,1
+category,identifiable_rows,media,text,998,0,0.0,955
+category,identifiable_rows,category_name,text,998,0,0.0,6
+category,identifiable_rows,product_id,integer-like (stored as text),998,0,0.0,956
+category,identifiable_rows,shop_id,integer-like (stored as text),998,0,0.0,482
+category,identifiable_rows,title,text,998,0,0.0,938
+category,identifiable_rows,currency,text,998,0,0.0,1
+category,identifiable_rows,stock,integer-like (stored as text),998,0,0.0,692
+category,identifiable_rows,crawl_time,text,998,0,0.0,17
+category,identifiable_rows,parse_time,text,998,0,0.0,82
+category,identifiable_rows,monthly_sold,integer-like (stored as text),998,0,0.0,476
+category,identifiable_rows,sold,integer-like (stored as text),998,0,0.0,888
+category,identifiable_rows,liked_count,integer-like (stored as text),998,0,0.0,548
+category,identifiable_rows,category_id,integer-like (stored as text),998,0,0.0,3
+category,identifiable_rows,brand,text,998,370,37.07,201
+category,identifiable_rows,price,numeric (stored as text),998,0,0.0,612
+category,identifiable_rows,price_before_discount,numeric (stored as text),998,0,0.0,492
+category,identifiable_rows,min_price,numeric (stored as text),998,0,0.0,612
+category,identifiable_rows,max_price,numeric (stored as text),998,0,0.0,659
+category,identifiable_rows,min_mrp,numeric (stored as text),998,0,0.0,492
+category,identifiable_rows,max_mrp,numeric (stored as text),998,0,0.0,528
+category,identifiable_rows,discount,text,998,218,21.84,92
+category,identifiable_rows,rating,numeric (stored as text),998,0,0.0,849
+category,identifiable_rows,rating_count,integer-like (stored as text),998,0,0.0,702
+category,identifiable_rows,reviews_image_count,integer-like (stored as text),998,0,0.0,490
+category,identifiable_rows,reviews_count,integer-like (stored as text),998,0,0.0,533
+category,identifiable_rows,isVirtualItem,text,998,0,0.0,1
+category,identifiable_rows,isSaleItemVerified,text,998,0,0.0,1
+keyword,whole_workbook,Keyword,text,12861,11862,92.23,17
+keyword,whole_workbook,language,text,12861,11862,92.23,1
+keyword,whole_workbook,page_number,integer-like (stored as text),12861,11862,92.23,1
+keyword,whole_workbook,rank,integer-like (stored as text),12861,11862,92.23,60
+keyword,whole_workbook,id,integer-like (stored as text),12861,11862,92.23,60
+keyword,whole_workbook,seed,empty,12861,12861,100.0,0
+keyword,whole_workbook,source_url,text,12861,11862,92.23,17
+keyword,whole_workbook,sponsored,integer-like (stored as text),12861,11862,92.23,2
+keyword,whole_workbook,url,text,12861,11862,92.23,836
+keyword,whole_workbook,videos_counts,integer-like (stored as text),12861,11862,92.23,2
+keyword,whole_workbook,domain,text,12861,11862,92.23,1
+keyword,whole_workbook,flex_name,text,12861,12698,98.73,1
+keyword,whole_workbook,media,text,12861,11862,92.23,835
+keyword,whole_workbook,product_id,integer-like (stored as text),12861,11862,92.23,836
+keyword,whole_workbook,shop_id,integer-like (stored as text),12861,11862,92.23,543
+keyword,whole_workbook,title,text,12861,11862,92.23,800
+keyword,whole_workbook,brand,text,12861,12257,95.3,138
+keyword,whole_workbook,shop_locations,text,12861,12034,93.57,10
+keyword,whole_workbook,stock,integer-like (stored as text),12861,11862,92.23,467
+keyword,whole_workbook,crawl_time,text,12861,11862,92.23,17
+keyword,whole_workbook,parse_time,text,12861,11862,92.23,14
+keyword,whole_workbook,monthly_sold,integer-like (stored as text),12861,11862,92.23,151
+keyword,whole_workbook,sold,integer-like (stored as text),12861,11862,92.23,340
+keyword,whole_workbook,liked_count,integer-like (stored as text),12861,11862,92.23,209
+keyword,whole_workbook,currency,text,12861,11862,92.23,1
+keyword,whole_workbook,price,numeric (stored as text),12861,11862,92.23,531
+keyword,whole_workbook,price_before_discount,numeric (stored as text),12861,11862,92.23,493
+keyword,whole_workbook,min_price,numeric (stored as text),12861,11862,92.23,531
+keyword,whole_workbook,max_price,numeric (stored as text),12861,11862,92.23,564
+keyword,whole_workbook,min_mrp,numeric (stored as text),12861,11862,92.23,493
+keyword,whole_workbook,max_mrp,numeric (stored as text),12861,11862,92.23,533
+keyword,whole_workbook,discount,text,12861,12187,94.76,82
+keyword,whole_workbook,free_shipping,text,12861,0,0.0,2
+keyword,whole_workbook,rating,numeric (stored as text),12861,0,0.0,1941
+keyword,whole_workbook,rating_count,integer-like (stored as text),12861,0,0.0,1082
+keyword,whole_workbook,reviews_count,integer-like (stored as text),12861,0,0.0,710
+keyword,whole_workbook,reviews_image_count,integer-like (stored as text),12861,0,0.0,647
+keyword,whole_workbook,isVirtualItem,text,12861,0,0.0,1
+keyword,whole_workbook,isSaleItemVerified,text,12861,0,0.0,1
+keyword,identifiable_rows,Keyword,text,999,0,0.0,17
+keyword,identifiable_rows,language,text,999,0,0.0,1
+keyword,identifiable_rows,page_number,integer-like (stored as text),999,0,0.0,1
+keyword,identifiable_rows,rank,integer-like (stored as text),999,0,0.0,60
+keyword,identifiable_rows,id,integer-like (stored as text),999,0,0.0,60
+keyword,identifiable_rows,seed,empty,999,999,100.0,0
+keyword,identifiable_rows,source_url,text,999,0,0.0,17
+keyword,identifiable_rows,sponsored,integer-like (stored as text),999,0,0.0,2
+keyword,identifiable_rows,url,text,999,0,0.0,836
+keyword,identifiable_rows,videos_counts,integer-like (stored as text),999,0,0.0,2
+keyword,identifiable_rows,domain,text,999,0,0.0,1
+keyword,identifiable_rows,flex_name,text,999,836,83.68,1
+keyword,identifiable_rows,media,text,999,0,0.0,835
+keyword,identifiable_rows,product_id,integer-like (stored as text),999,0,0.0,836
+keyword,identifiable_rows,shop_id,integer-like (stored as text),999,0,0.0,543
+keyword,identifiable_rows,title,text,999,0,0.0,800
+keyword,identifiable_rows,brand,text,999,395,39.54,138
+keyword,identifiable_rows,shop_locations,text,999,172,17.22,10
+keyword,identifiable_rows,stock,integer-like (stored as text),999,0,0.0,467
+keyword,identifiable_rows,crawl_time,text,999,0,0.0,17
+keyword,identifiable_rows,parse_time,text,999,0,0.0,14
+keyword,identifiable_rows,monthly_sold,integer-like (stored as text),999,0,0.0,151
+keyword,identifiable_rows,sold,integer-like (stored as text),999,0,0.0,340
+keyword,identifiable_rows,liked_count,integer-like (stored as text),999,0,0.0,209
+keyword,identifiable_rows,currency,text,999,0,0.0,1
+keyword,identifiable_rows,price,numeric (stored as text),999,0,0.0,531
+keyword,identifiable_rows,price_before_discount,numeric (stored as text),999,0,0.0,493
+keyword,identifiable_rows,min_price,numeric (stored as text),999,0,0.0,531
+keyword,identifiable_rows,max_price,numeric (stored as text),999,0,0.0,564
+keyword,identifiable_rows,min_mrp,numeric (stored as text),999,0,0.0,493
+keyword,identifiable_rows,max_mrp,numeric (stored as text),999,0,0.0,533
+keyword,identifiable_rows,discount,text,999,325,32.53,82
+keyword,identifiable_rows,free_shipping,text,999,0,0.0,2
+keyword,identifiable_rows,rating,numeric (stored as text),999,0,0.0,371
+keyword,identifiable_rows,rating_count,integer-like (stored as text),999,0,0.0,303
+keyword,identifiable_rows,reviews_count,integer-like (stored as text),999,0,0.0,209
+keyword,identifiable_rows,reviews_image_count,integer-like (stored as text),999,0,0.0,195
+keyword,identifiable_rows,isVirtualItem,text,999,0,0.0,1
+keyword,identifiable_rows,isSaleItemVerified,text,999,0,0.0,1
+store,whole_workbook,language,text,999,0,0.0,1
+store,whole_workbook,store_name,text,999,0,0.0,12
+store,whole_workbook,page_number,integer-like (stored as text),999,0,0.0,3
+store,whole_workbook,rank,integer-like (stored as text),999,0,0.0,90
+store,whole_workbook,id,integer-like (stored as text),999,0,0.0,90
+store,whole_workbook,seed,empty,999,999,100.0,0
+store,whole_workbook,source_url,text,999,0,0.0,35
+store,whole_workbook,sponsored,integer-like (stored as text),999,0,0.0,1
+store,whole_workbook,url,text,999,0,0.0,999
+store,whole_workbook,videos_counts,integer-like (stored as text),999,0,0.0,2
+store,whole_workbook,domain,text,999,0,0.0,1
+store,whole_workbook,discount,text,999,0,0.0,68
+store,whole_workbook,flex_name,text,999,89,8.91,1
+store,whole_workbook,media,text,999,0,0.0,999
+store,whole_workbook,product_id,integer-like (stored as text),999,0,0.0,999
+store,whole_workbook,shop_id,integer-like (stored as text),999,0,0.0,12
+store,whole_workbook,title,text,999,0,0.0,997
+store,whole_workbook,currency,text,999,0,0.0,1
+store,whole_workbook,stock,integer-like (stored as text),999,0,0.0,333
+store,whole_workbook,crawl_time,text,999,0,0.0,35
+store,whole_workbook,parse_time,text,999,0,0.0,43
+store,whole_workbook,monthly_sold,integer-like (stored as text),999,0,0.0,200
+store,whole_workbook,sold,integer-like (stored as text),999,0,0.0,671
+store,whole_workbook,liked_count,integer-like (stored as text),999,0,0.0,403
+store,whole_workbook,category_id,integer-like (stored as text),999,0,0.0,7
+store,whole_workbook,brand,text,999,64,6.41,99
+store,whole_workbook,price,numeric (stored as text),999,0,0.0,617
+store,whole_workbook,price_before_discount,numeric (stored as text),999,0,0.0,408
+store,whole_workbook,min_price,numeric (stored as text),999,0,0.0,612
+store,whole_workbook,max_price,numeric (stored as text),999,0,0.0,614
+store,whole_workbook,min_mrp,numeric (stored as text),999,0,0.0,478
+store,whole_workbook,max_mrp,numeric (stored as text),999,0,0.0,489
+store,whole_workbook,rating,numeric (stored as text),999,0,0.0,620
+store,whole_workbook,rating_count,integer-like (stored as text),999,0,0.0,490
+store,whole_workbook,reviews_count,integer-like (stored as text),999,0,0.0,359
+store,whole_workbook,reviews_image_count,integer-like (stored as text),999,0,0.0,330
+store,whole_workbook,isSaleItemVerified,text,999,0,0.0,1
+store,identifiable_rows,language,text,999,0,0.0,1
+store,identifiable_rows,store_name,text,999,0,0.0,12
+store,identifiable_rows,page_number,integer-like (stored as text),999,0,0.0,3
+store,identifiable_rows,rank,integer-like (stored as text),999,0,0.0,90
+store,identifiable_rows,id,integer-like (stored as text),999,0,0.0,90
+store,identifiable_rows,seed,empty,999,999,100.0,0
+store,identifiable_rows,source_url,text,999,0,0.0,35
+store,identifiable_rows,sponsored,integer-like (stored as text),999,0,0.0,1
+store,identifiable_rows,url,text,999,0,0.0,999
+store,identifiable_rows,videos_counts,integer-like (stored as text),999,0,0.0,2
+store,identifiable_rows,domain,text,999,0,0.0,1
+store,identifiable_rows,discount,text,999,0,0.0,68
+store,identifiable_rows,flex_name,text,999,89,8.91,1
+store,identifiable_rows,media,text,999,0,0.0,999
+store,identifiable_rows,product_id,integer-like (stored as text),999,0,0.0,999
+store,identifiable_rows,shop_id,integer-like (stored as text),999,0,0.0,12
+store,identifiable_rows,title,text,999,0,0.0,997
+store,identifiable_rows,currency,text,999,0,0.0,1
+store,identifiable_rows,stock,integer-like (stored as text),999,0,0.0,333
+store,identifiable_rows,crawl_time,text,999,0,0.0,35
+store,identifiable_rows,parse_time,text,999,0,0.0,43
+store,identifiable_rows,monthly_sold,integer-like (stored as text),999,0,0.0,200
+store,identifiable_rows,sold,integer-like (stored as text),999,0,0.0,671
+store,identifiable_rows,liked_count,integer-like (stored as text),999,0,0.0,403
+store,identifiable_rows,category_id,integer-like (stored as text),999,0,0.0,7
+store,identifiable_rows,brand,text,999,64,6.41,99
+store,identifiable_rows,price,numeric (stored as text),999,0,0.0,617
+store,identifiable_rows,price_before_discount,numeric (stored as text),999,0,0.0,408
+store,identifiable_rows,min_price,numeric (stored as text),999,0,0.0,612
+store,identifiable_rows,max_price,numeric (stored as text),999,0,0.0,614
+store,identifiable_rows,min_mrp,numeric (stored as text),999,0,0.0,478
+store,identifiable_rows,max_mrp,numeric (stored as text),999,0,0.0,489
+store,identifiable_rows,rating,numeric (stored as text),999,0,0.0,620
+store,identifiable_rows,rating_count,integer-like (stored as text),999,0,0.0,490
+store,identifiable_rows,reviews_count,integer-like (stored as text),999,0,0.0,359
+store,identifiable_rows,reviews_image_count,integer-like (stored as text),999,0,0.0,330
+store,identifiable_rows,isSaleItemVerified,text,999,0,0.0,1

@@ -1,0 +1,4 @@
+view,physical_rows,n_identifiable_observations,n_incomplete_rows,distinct_shop_product_pairs,distinct_shops,repeated_rows_within_view
+category,998,998,0,956,482,42
+keyword,12861,999,11862,836,543,163
+store,999,999,0,999,12,0

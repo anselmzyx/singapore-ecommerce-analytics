@@ -1,0 +1,5 @@
+section,label,observations,distinct_listings,distinct_shops
+by_view,category,998,956,482
+by_view,keyword,999,836,543
+by_view,store,999,999,12
+overall,all_views,2996,2727,968

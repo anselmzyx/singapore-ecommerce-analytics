@@ -1,0 +1,15 @@
+{
+  "n_observations": 2996,
+  "n_distinct_listings": 2727,
+  "n_distinct_shops": 968,
+  "reconciles_2996_observations": true,
+  "reconciles_2727_distinct_listings": true,
+  "reconciles_968_distinct_shops": true,
+  "cross_view_overlap_sum": 2727,
+  "cross_view_overlap_matches_total_distinct_listings": true,
+  "discount_status_total_observations": 2996,
+  "discount_status_total_matches_2996": true,
+  "category_view_n_rows": 998,
+  "category_view_n_distinct_listings": 956,
+  "category_view_distinct_matches_stage1_956": true
+}

@@ -1,0 +1,4 @@
+source_view,n_recorded_populated,n_testable_both_available,n_populated_but_untestable,n_inconsistent,pct_inconsistent_of_testable
+category,780.0,780.0,0.0,150.0,19.2
+keyword,674.0,674.0,0.0,70.0,10.4
+store,999.0,687.0,312.0,0.0,0.0

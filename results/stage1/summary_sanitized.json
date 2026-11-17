@@ -1,0 +1,2515 @@
+{
+  "file_inventory": [
+    {
+      "view": "category",
+      "filename": "SG_Category_Data_Mon_18_Aug_2025.xlsx",
+      "size_bytes": 412133,
+      "sha256": "ba8c8cb8142dea8b5355796c7f20aa527e566505bc28bb5fc2f9681276a81003",
+      "sheet_names": [
+        "Sheet1"
+      ],
+      "n_sheets": 1
+    },
+    {
+      "view": "keyword",
+      "filename": "SG_Keyword_Data_Mon_18_Aug_2025.xlsx",
+      "size_bytes": 809641,
+      "sha256": "e4726104138d37c55603bc4feda8cd375cf64220afbd6a3b9d3665e804102406",
+      "sheet_names": [
+        "Sheet1"
+      ],
+      "n_sheets": 1
+    },
+    {
+      "view": "store",
+      "filename": "SG_Store_Data_Mon_18_Aug_2025.xlsx",
+      "size_bytes": 347185,
+      "sha256": "b9f7f229b8c5c3a1570175d3af6afb674e43af28cd4fe2cacad0295cab7cf006",
+      "sheet_names": [
+        "Sheet1"
+      ],
+      "n_sheets": 1
+    }
+  ],
+  "sheet_profiles": {
+    "category": {
+      "filename": "SG_Category_Data_Mon_18_Aug_2025.xlsx",
+      "physical_rows": 998,
+      "physical_cols": 38,
+      "columns": [
+        "language",
+        "page_number",
+        "rank",
+        "id",
+        "seed",
+        "source_url",
+        "sponsored",
+        "url",
+        "videos_count",
+        "domain",
+        "flex_name",
+        "media",
+        "category_name",
+        "product_id",
+        "shop_id",
+        "title",
+        "currency",
+        "stock",
+        "crawl_time",
+        "parse_time",
+        "monthly_sold",
+        "sold",
+        "liked_count",
+        "category_id",
+        "brand",
+        "price",
+        "price_before_discount",
+        "min_price",
+        "max_price",
+        "min_mrp",
+        "max_mrp",
+        "discount",
+        "rating",
+        "rating_count",
+        "reviews_image_count",
+        "reviews_count",
+        "isVirtualItem",
+        "isSaleItemVerified"
+      ],
+      "n_identifiable_observations": 998,
+      "n_incomplete_rows": 0,
+      "incomplete_row_nonnull_columns": [],
+      "distinct_shop_product_pairs": 956,
+      "distinct_shops": 482,
+      "repeated_rows_within_view": 42,
+      "currency_values_found": [
+        "SGD"
+      ],
+      "domain_values_found": [
+        "SHOPEE.SG"
+      ],
+      "brand_missing_count": 370,
+      "store_price_before_discount_eq_neg1": null,
+      "store_parse_time_before_crawl_time": null,
+      "price_quality": {
+        "price": {
+          "min": 0.1,
+          "max": 999.0,
+          "n_null": 0,
+          "n_zero_or_negative_excl_sentinel": 0
+        },
+        "price_before_discount": {
+          "min": 0.1,
+          "max": 999.0,
+          "n_null": 0,
+          "n_zero_or_negative_excl_sentinel": 0
+        }
+      },
+      "discount_quality": {
+        "n_populated": 780,
+        "n_total_identifiable": 998,
+        "min_pct": 1.0,
+        "max_pct": 98.0,
+        "n_diff_gt_1pt_vs_implied": 150,
+        "pct_diff_gt_1pt_of_populated": 19.2
+      },
+      "sold_counter_quality": {
+        "sold": {
+          "n_null": 0,
+          "min": 22.0,
+          "max": 229144.0
+        },
+        "monthly_sold": {
+          "n_null": 0,
+          "min": 0.0,
+          "max": 4505.0
+        }
+      },
+      "timestamp_quality": {
+        "crawl_time": {
+          "min": "2025-08-18 00:21:24",
+          "max": "2025-08-18 00:24:58",
+          "n_malformed_unparseable": 0
+        },
+        "parse_time": {
+          "min": "2025-08-18 18:11:04",
+          "max": "2025-08-18 19:46:52",
+          "n_malformed_unparseable": 0
+        }
+      },
+      "category_distribution": {
+        "Laundry Care": 180,
+        "Housekeeping": 180,
+        "Detergents": 180,
+        "Softeners": 180,
+        "Bath & Body": 180,
+        "Body lotion": 98
+      },
+      "keyword_distribution": null,
+      "sponsored_value_counts": {
+        "0": 998
+      },
+      "repeated_pairs_with_conflicting_price": 0,
+      "column_profile_whole_workbook": [
+        {
+          "population": "whole_workbook",
+          "column": "language",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "whole_workbook",
+          "column": "page_number",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 3
+        },
+        {
+          "population": "whole_workbook",
+          "column": "rank",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 180
+        },
+        {
+          "population": "whole_workbook",
+          "column": "id",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 180
+        },
+        {
+          "population": "whole_workbook",
+          "column": "seed",
+          "inferred_dtype": "empty",
+          "denominator_rows": 998,
+          "missing_count": 998,
+          "missing_pct": 100.0,
+          "n_unique": 0
+        },
+        {
+          "population": "whole_workbook",
+          "column": "source_url",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 17
+        },
+        {
+          "population": "whole_workbook",
+          "column": "sponsored",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "whole_workbook",
+          "column": "url",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 956
+        },
+        {
+          "population": "whole_workbook",
+          "column": "videos_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 2
+        },
+        {
+          "population": "whole_workbook",
+          "column": "domain",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "whole_workbook",
+          "column": "flex_name",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 719,
+          "missing_pct": 72.04,
+          "n_unique": 1
+        },
+        {
+          "population": "whole_workbook",
+          "column": "media",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 955
+        },
+        {
+          "population": "whole_workbook",
+          "column": "category_name",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 6
+        },
+        {
+          "population": "whole_workbook",
+          "column": "product_id",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 956
+        },
+        {
+          "population": "whole_workbook",
+          "column": "shop_id",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 482
+        },
+        {
+          "population": "whole_workbook",
+          "column": "title",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 938
+        },
+        {
+          "population": "whole_workbook",
+          "column": "currency",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "whole_workbook",
+          "column": "stock",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 692
+        },
+        {
+          "population": "whole_workbook",
+          "column": "crawl_time",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 17
+        },
+        {
+          "population": "whole_workbook",
+          "column": "parse_time",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 82
+        },
+        {
+          "population": "whole_workbook",
+          "column": "monthly_sold",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 476
+        },
+        {
+          "population": "whole_workbook",
+          "column": "sold",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 888
+        },
+        {
+          "population": "whole_workbook",
+          "column": "liked_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 548
+        },
+        {
+          "population": "whole_workbook",
+          "column": "category_id",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 3
+        },
+        {
+          "population": "whole_workbook",
+          "column": "brand",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 370,
+          "missing_pct": 37.07,
+          "n_unique": 201
+        },
+        {
+          "population": "whole_workbook",
+          "column": "price",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 612
+        },
+        {
+          "population": "whole_workbook",
+          "column": "price_before_discount",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 492
+        },
+        {
+          "population": "whole_workbook",
+          "column": "min_price",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 612
+        },
+        {
+          "population": "whole_workbook",
+          "column": "max_price",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 659
+        },
+        {
+          "population": "whole_workbook",
+          "column": "min_mrp",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 492
+        },
+        {
+          "population": "whole_workbook",
+          "column": "max_mrp",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 528
+        },
+        {
+          "population": "whole_workbook",
+          "column": "discount",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 218,
+          "missing_pct": 21.84,
+          "n_unique": 92
+        },
+        {
+          "population": "whole_workbook",
+          "column": "rating",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 849
+        },
+        {
+          "population": "whole_workbook",
+          "column": "rating_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 702
+        },
+        {
+          "population": "whole_workbook",
+          "column": "reviews_image_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 490
+        },
+        {
+          "population": "whole_workbook",
+          "column": "reviews_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 533
+        },
+        {
+          "population": "whole_workbook",
+          "column": "isVirtualItem",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "whole_workbook",
+          "column": "isSaleItemVerified",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        }
+      ],
+      "column_profile_identifiable_rows": [
+        {
+          "population": "identifiable_rows",
+          "column": "language",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "page_number",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 3
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "rank",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 180
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "id",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 180
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "seed",
+          "inferred_dtype": "empty",
+          "denominator_rows": 998,
+          "missing_count": 998,
+          "missing_pct": 100.0,
+          "n_unique": 0
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "source_url",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 17
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "sponsored",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "url",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 956
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "videos_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 2
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "domain",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "flex_name",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 719,
+          "missing_pct": 72.04,
+          "n_unique": 1
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "media",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 955
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "category_name",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 6
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "product_id",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 956
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "shop_id",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 482
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "title",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 938
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "currency",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "stock",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 692
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "crawl_time",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 17
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "parse_time",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 82
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "monthly_sold",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 476
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "sold",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 888
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "liked_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 548
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "category_id",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 3
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "brand",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 370,
+          "missing_pct": 37.07,
+          "n_unique": 201
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "price",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 612
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "price_before_discount",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 492
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "min_price",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 612
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "max_price",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 659
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "min_mrp",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 492
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "max_mrp",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 528
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "discount",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 218,
+          "missing_pct": 21.84,
+          "n_unique": 92
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "rating",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 849
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "rating_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 702
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "reviews_image_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 490
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "reviews_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 533
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "isVirtualItem",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "isSaleItemVerified",
+          "inferred_dtype": "text",
+          "denominator_rows": 998,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        }
+      ]
+    },
+    "keyword": {
+      "filename": "SG_Keyword_Data_Mon_18_Aug_2025.xlsx",
+      "physical_rows": 12861,
+      "physical_cols": 39,
+      "columns": [
+        "Keyword",
+        "language",
+        "page_number",
+        "rank",
+        "id",
+        "seed",
+        "source_url",
+        "sponsored",
+        "url",
+        "videos_counts",
+        "domain",
+        "flex_name",
+        "media",
+        "product_id",
+        "shop_id",
+        "title",
+        "brand",
+        "shop_locations",
+        "stock",
+        "crawl_time",
+        "parse_time",
+        "monthly_sold",
+        "sold",
+        "liked_count",
+        "currency",
+        "price",
+        "price_before_discount",
+        "min_price",
+        "max_price",
+        "min_mrp",
+        "max_mrp",
+        "discount",
+        "free_shipping",
+        "rating",
+        "rating_count",
+        "reviews_count",
+        "reviews_image_count",
+        "isVirtualItem",
+        "isSaleItemVerified"
+      ],
+      "n_identifiable_observations": 999,
+      "n_incomplete_rows": 11862,
+      "incomplete_row_nonnull_columns": [
+        {
+          "column": "isSaleItemVerified",
+          "nonnull_pct": 100.0
+        },
+        {
+          "column": "isVirtualItem",
+          "nonnull_pct": 100.0
+        },
+        {
+          "column": "reviews_image_count",
+          "nonnull_pct": 100.0
+        },
+        {
+          "column": "reviews_count",
+          "nonnull_pct": 100.0
+        },
+        {
+          "column": "rating_count",
+          "nonnull_pct": 100.0
+        },
+        {
+          "column": "rating",
+          "nonnull_pct": 100.0
+        },
+        {
+          "column": "free_shipping",
+          "nonnull_pct": 100.0
+        }
+      ],
+      "distinct_shop_product_pairs": 836,
+      "distinct_shops": 543,
+      "repeated_rows_within_view": 163,
+      "currency_values_found": [
+        "SGD"
+      ],
+      "domain_values_found": [
+        "SHOPEE.SG"
+      ],
+      "brand_missing_count": 395,
+      "store_price_before_discount_eq_neg1": null,
+      "store_parse_time_before_crawl_time": null,
+      "price_quality": {
+        "price": {
+          "min": 1.48,
+          "max": 999.0,
+          "n_null": 0,
+          "n_zero_or_negative_excl_sentinel": 0
+        },
+        "price_before_discount": {
+          "min": 1.85,
+          "max": 999.0,
+          "n_null": 0,
+          "n_zero_or_negative_excl_sentinel": 0
+        }
+      },
+      "discount_quality": {
+        "n_populated": 674,
+        "n_total_identifiable": 999,
+        "min_pct": 1.0,
+        "max_pct": 92.0,
+        "n_diff_gt_1pt_vs_implied": 70,
+        "pct_diff_gt_1pt_of_populated": 10.4
+      },
+      "sold_counter_quality": {
+        "sold": {
+          "n_null": 0,
+          "min": 0.0,
+          "max": 94862.0
+        },
+        "monthly_sold": {
+          "n_null": 0,
+          "min": 0.0,
+          "max": 3633.0
+        }
+      },
+      "timestamp_quality": {
+        "crawl_time": {
+          "min": "2025-08-18 02:34:39",
+          "max": "2025-08-18 03:10:05",
+          "n_malformed_unparseable": 0
+        },
+        "parse_time": {
+          "min": "2025-08-18 18:10:42",
+          "max": "2025-08-18 18:20:34",
+          "n_malformed_unparseable": 0
+        }
+      },
+      "category_distribution": null,
+      "keyword_distribution": {
+        "ahc moisturizer": 60,
+        "ahc serum": 60,
+        "ahc sunscreen": 60,
+        "ahc": 60,
+        "alum stone": 60,
+        "amway deodorant": 60,
+        "antabax body wash": 60,
+        "antabax": 60,
+        "anti dandruff shampoo": 60,
+        "anti frizz hair serum": 60,
+        "antibacterial body wash": 60,
+        "antiperspirant deodorant": 60,
+        "antiperspirant": 60,
+        "ar fum laundry capsules": 60,
+        "axe body spray": 60,
+        "bar soap": 60,
+        "body lotion": 39
+      },
+      "sponsored_value_counts": {
+        "1": 566,
+        "0": 433
+      },
+      "repeated_pairs_with_conflicting_price": 0,
+      "column_profile_whole_workbook": [
+        {
+          "population": "whole_workbook",
+          "column": "Keyword",
+          "inferred_dtype": "text",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 17
+        },
+        {
+          "population": "whole_workbook",
+          "column": "language",
+          "inferred_dtype": "text",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 1
+        },
+        {
+          "population": "whole_workbook",
+          "column": "page_number",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 1
+        },
+        {
+          "population": "whole_workbook",
+          "column": "rank",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 60
+        },
+        {
+          "population": "whole_workbook",
+          "column": "id",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 60
+        },
+        {
+          "population": "whole_workbook",
+          "column": "seed",
+          "inferred_dtype": "empty",
+          "denominator_rows": 12861,
+          "missing_count": 12861,
+          "missing_pct": 100.0,
+          "n_unique": 0
+        },
+        {
+          "population": "whole_workbook",
+          "column": "source_url",
+          "inferred_dtype": "text",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 17
+        },
+        {
+          "population": "whole_workbook",
+          "column": "sponsored",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 2
+        },
+        {
+          "population": "whole_workbook",
+          "column": "url",
+          "inferred_dtype": "text",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 836
+        },
+        {
+          "population": "whole_workbook",
+          "column": "videos_counts",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 2
+        },
+        {
+          "population": "whole_workbook",
+          "column": "domain",
+          "inferred_dtype": "text",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 1
+        },
+        {
+          "population": "whole_workbook",
+          "column": "flex_name",
+          "inferred_dtype": "text",
+          "denominator_rows": 12861,
+          "missing_count": 12698,
+          "missing_pct": 98.73,
+          "n_unique": 1
+        },
+        {
+          "population": "whole_workbook",
+          "column": "media",
+          "inferred_dtype": "text",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 835
+        },
+        {
+          "population": "whole_workbook",
+          "column": "product_id",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 836
+        },
+        {
+          "population": "whole_workbook",
+          "column": "shop_id",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 543
+        },
+        {
+          "population": "whole_workbook",
+          "column": "title",
+          "inferred_dtype": "text",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 800
+        },
+        {
+          "population": "whole_workbook",
+          "column": "brand",
+          "inferred_dtype": "text",
+          "denominator_rows": 12861,
+          "missing_count": 12257,
+          "missing_pct": 95.3,
+          "n_unique": 138
+        },
+        {
+          "population": "whole_workbook",
+          "column": "shop_locations",
+          "inferred_dtype": "text",
+          "denominator_rows": 12861,
+          "missing_count": 12034,
+          "missing_pct": 93.57,
+          "n_unique": 10
+        },
+        {
+          "population": "whole_workbook",
+          "column": "stock",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 467
+        },
+        {
+          "population": "whole_workbook",
+          "column": "crawl_time",
+          "inferred_dtype": "text",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 17
+        },
+        {
+          "population": "whole_workbook",
+          "column": "parse_time",
+          "inferred_dtype": "text",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 14
+        },
+        {
+          "population": "whole_workbook",
+          "column": "monthly_sold",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 151
+        },
+        {
+          "population": "whole_workbook",
+          "column": "sold",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 340
+        },
+        {
+          "population": "whole_workbook",
+          "column": "liked_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 209
+        },
+        {
+          "population": "whole_workbook",
+          "column": "currency",
+          "inferred_dtype": "text",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 1
+        },
+        {
+          "population": "whole_workbook",
+          "column": "price",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 531
+        },
+        {
+          "population": "whole_workbook",
+          "column": "price_before_discount",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 493
+        },
+        {
+          "population": "whole_workbook",
+          "column": "min_price",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 531
+        },
+        {
+          "population": "whole_workbook",
+          "column": "max_price",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 564
+        },
+        {
+          "population": "whole_workbook",
+          "column": "min_mrp",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 493
+        },
+        {
+          "population": "whole_workbook",
+          "column": "max_mrp",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 12861,
+          "missing_count": 11862,
+          "missing_pct": 92.23,
+          "n_unique": 533
+        },
+        {
+          "population": "whole_workbook",
+          "column": "discount",
+          "inferred_dtype": "text",
+          "denominator_rows": 12861,
+          "missing_count": 12187,
+          "missing_pct": 94.76,
+          "n_unique": 82
+        },
+        {
+          "population": "whole_workbook",
+          "column": "free_shipping",
+          "inferred_dtype": "text",
+          "denominator_rows": 12861,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 2
+        },
+        {
+          "population": "whole_workbook",
+          "column": "rating",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 12861,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1941
+        },
+        {
+          "population": "whole_workbook",
+          "column": "rating_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 12861,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1082
+        },
+        {
+          "population": "whole_workbook",
+          "column": "reviews_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 12861,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 710
+        },
+        {
+          "population": "whole_workbook",
+          "column": "reviews_image_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 12861,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 647
+        },
+        {
+          "population": "whole_workbook",
+          "column": "isVirtualItem",
+          "inferred_dtype": "text",
+          "denominator_rows": 12861,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "whole_workbook",
+          "column": "isSaleItemVerified",
+          "inferred_dtype": "text",
+          "denominator_rows": 12861,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        }
+      ],
+      "column_profile_identifiable_rows": [
+        {
+          "population": "identifiable_rows",
+          "column": "Keyword",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 17
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "language",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "page_number",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "rank",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 60
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "id",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 60
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "seed",
+          "inferred_dtype": "empty",
+          "denominator_rows": 999,
+          "missing_count": 999,
+          "missing_pct": 100.0,
+          "n_unique": 0
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "source_url",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 17
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "sponsored",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 2
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "url",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 836
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "videos_counts",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 2
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "domain",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "flex_name",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 836,
+          "missing_pct": 83.68,
+          "n_unique": 1
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "media",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 835
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "product_id",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 836
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "shop_id",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 543
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "title",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 800
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "brand",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 395,
+          "missing_pct": 39.54,
+          "n_unique": 138
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "shop_locations",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 172,
+          "missing_pct": 17.22,
+          "n_unique": 10
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "stock",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 467
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "crawl_time",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 17
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "parse_time",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 14
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "monthly_sold",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 151
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "sold",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 340
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "liked_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 209
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "currency",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "price",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 531
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "price_before_discount",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 493
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "min_price",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 531
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "max_price",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 564
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "min_mrp",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 493
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "max_mrp",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 533
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "discount",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 325,
+          "missing_pct": 32.53,
+          "n_unique": 82
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "free_shipping",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 2
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "rating",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 371
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "rating_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 303
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "reviews_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 209
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "reviews_image_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 195
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "isVirtualItem",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "isSaleItemVerified",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        }
+      ]
+    },
+    "store": {
+      "filename": "SG_Store_Data_Mon_18_Aug_2025.xlsx",
+      "physical_rows": 999,
+      "physical_cols": 37,
+      "columns": [
+        "language",
+        "store_name",
+        "page_number",
+        "rank",
+        "id",
+        "seed",
+        "source_url",
+        "sponsored",
+        "url",
+        "videos_counts",
+        "domain",
+        "discount",
+        "flex_name",
+        "media",
+        "product_id",
+        "shop_id",
+        "title",
+        "currency",
+        "stock",
+        "crawl_time",
+        "parse_time",
+        "monthly_sold",
+        "sold",
+        "liked_count",
+        "category_id",
+        "brand",
+        "price",
+        "price_before_discount",
+        "min_price",
+        "max_price",
+        "min_mrp",
+        "max_mrp",
+        "rating",
+        "rating_count",
+        "reviews_count",
+        "reviews_image_count",
+        "isSaleItemVerified"
+      ],
+      "n_identifiable_observations": 999,
+      "n_incomplete_rows": 0,
+      "incomplete_row_nonnull_columns": [],
+      "distinct_shop_product_pairs": 999,
+      "distinct_shops": 12,
+      "repeated_rows_within_view": 0,
+      "currency_values_found": [
+        "SGD"
+      ],
+      "domain_values_found": [
+        "SHOPEE.SG"
+      ],
+      "brand_missing_count": 64,
+      "store_price_before_discount_eq_neg1": 312,
+      "store_parse_time_before_crawl_time": 39,
+      "price_quality": {
+        "price": {
+          "min": 1.73,
+          "max": 999.0,
+          "n_null": 0,
+          "n_zero_or_negative_excl_sentinel": 0
+        },
+        "price_before_discount": {
+          "min": -1.0,
+          "max": 431.03,
+          "n_null": 0,
+          "n_zero_or_negative_excl_sentinel": 0
+        }
+      },
+      "discount_quality": {
+        "n_populated": 999,
+        "n_total_identifiable": 999,
+        "min_pct": 0.0,
+        "max_pct": 75.0,
+        "n_diff_gt_1pt_vs_implied": 0,
+        "pct_diff_gt_1pt_of_populated": 0.0
+      },
+      "sold_counter_quality": {
+        "sold": {
+          "n_null": 0,
+          "min": 0.0,
+          "max": 23963.0
+        },
+        "monthly_sold": {
+          "n_null": 0,
+          "min": 0.0,
+          "max": 1326.0
+        }
+      },
+      "timestamp_quality": {
+        "crawl_time": {
+          "min": "2025-08-18 18:43:09",
+          "max": "2025-08-18 18:47:02",
+          "n_malformed_unparseable": 0
+        },
+        "parse_time": {
+          "min": "2025-08-18 18:11:40",
+          "max": "2025-08-18 19:10:09",
+          "n_malformed_unparseable": 0
+        }
+      },
+      "category_distribution": null,
+      "keyword_distribution": null,
+      "sponsored_value_counts": {
+        "0": 999
+      },
+      "repeated_pairs_with_conflicting_price": 0,
+      "column_profile_whole_workbook": [
+        {
+          "population": "whole_workbook",
+          "column": "language",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "whole_workbook",
+          "column": "store_name",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 12
+        },
+        {
+          "population": "whole_workbook",
+          "column": "page_number",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 3
+        },
+        {
+          "population": "whole_workbook",
+          "column": "rank",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 90
+        },
+        {
+          "population": "whole_workbook",
+          "column": "id",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 90
+        },
+        {
+          "population": "whole_workbook",
+          "column": "seed",
+          "inferred_dtype": "empty",
+          "denominator_rows": 999,
+          "missing_count": 999,
+          "missing_pct": 100.0,
+          "n_unique": 0
+        },
+        {
+          "population": "whole_workbook",
+          "column": "source_url",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 35
+        },
+        {
+          "population": "whole_workbook",
+          "column": "sponsored",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "whole_workbook",
+          "column": "url",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 999
+        },
+        {
+          "population": "whole_workbook",
+          "column": "videos_counts",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 2
+        },
+        {
+          "population": "whole_workbook",
+          "column": "domain",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "whole_workbook",
+          "column": "discount",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 68
+        },
+        {
+          "population": "whole_workbook",
+          "column": "flex_name",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 89,
+          "missing_pct": 8.91,
+          "n_unique": 1
+        },
+        {
+          "population": "whole_workbook",
+          "column": "media",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 999
+        },
+        {
+          "population": "whole_workbook",
+          "column": "product_id",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 999
+        },
+        {
+          "population": "whole_workbook",
+          "column": "shop_id",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 12
+        },
+        {
+          "population": "whole_workbook",
+          "column": "title",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 997
+        },
+        {
+          "population": "whole_workbook",
+          "column": "currency",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "whole_workbook",
+          "column": "stock",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 333
+        },
+        {
+          "population": "whole_workbook",
+          "column": "crawl_time",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 35
+        },
+        {
+          "population": "whole_workbook",
+          "column": "parse_time",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 43
+        },
+        {
+          "population": "whole_workbook",
+          "column": "monthly_sold",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 200
+        },
+        {
+          "population": "whole_workbook",
+          "column": "sold",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 671
+        },
+        {
+          "population": "whole_workbook",
+          "column": "liked_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 403
+        },
+        {
+          "population": "whole_workbook",
+          "column": "category_id",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 7
+        },
+        {
+          "population": "whole_workbook",
+          "column": "brand",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 64,
+          "missing_pct": 6.41,
+          "n_unique": 99
+        },
+        {
+          "population": "whole_workbook",
+          "column": "price",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 617
+        },
+        {
+          "population": "whole_workbook",
+          "column": "price_before_discount",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 408
+        },
+        {
+          "population": "whole_workbook",
+          "column": "min_price",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 612
+        },
+        {
+          "population": "whole_workbook",
+          "column": "max_price",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 614
+        },
+        {
+          "population": "whole_workbook",
+          "column": "min_mrp",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 478
+        },
+        {
+          "population": "whole_workbook",
+          "column": "max_mrp",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 489
+        },
+        {
+          "population": "whole_workbook",
+          "column": "rating",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 620
+        },
+        {
+          "population": "whole_workbook",
+          "column": "rating_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 490
+        },
+        {
+          "population": "whole_workbook",
+          "column": "reviews_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 359
+        },
+        {
+          "population": "whole_workbook",
+          "column": "reviews_image_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 330
+        },
+        {
+          "population": "whole_workbook",
+          "column": "isSaleItemVerified",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        }
+      ],
+      "column_profile_identifiable_rows": [
+        {
+          "population": "identifiable_rows",
+          "column": "language",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "store_name",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 12
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "page_number",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 3
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "rank",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 90
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "id",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 90
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "seed",
+          "inferred_dtype": "empty",
+          "denominator_rows": 999,
+          "missing_count": 999,
+          "missing_pct": 100.0,
+          "n_unique": 0
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "source_url",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 35
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "sponsored",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "url",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 999
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "videos_counts",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 2
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "domain",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "discount",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 68
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "flex_name",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 89,
+          "missing_pct": 8.91,
+          "n_unique": 1
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "media",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 999
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "product_id",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 999
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "shop_id",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 12
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "title",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 997
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "currency",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "stock",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 333
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "crawl_time",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 35
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "parse_time",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 43
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "monthly_sold",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 200
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "sold",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 671
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "liked_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 403
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "category_id",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 7
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "brand",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 64,
+          "missing_pct": 6.41,
+          "n_unique": 99
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "price",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 617
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "price_before_discount",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 408
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "min_price",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 612
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "max_price",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 614
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "min_mrp",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 478
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "max_mrp",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 489
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "rating",
+          "inferred_dtype": "numeric (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 620
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "rating_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 490
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "reviews_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 359
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "reviews_image_count",
+          "inferred_dtype": "integer-like (stored as text)",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 330
+        },
+        {
+          "population": "identifiable_rows",
+          "column": "isSaleItemVerified",
+          "inferred_dtype": "text",
+          "denominator_rows": 999,
+          "missing_count": 0,
+          "missing_pct": 0.0,
+          "n_unique": 1
+        }
+      ]
+    }
+  },
+  "cross_view_overlap_distinct_pairs": {
+    "category_keyword": 42,
+    "category_store": 17,
+    "keyword_store": 6,
+    "all_three": 1
+  },
+  "cross_view_price_check": {
+    "n_pairs_in_multiple_views": 63,
+    "n_pairs_with_price_conflict": 9,
+    "conflicting_pairs": "REDACTED: individual shop_id/product_id/price records removed for the review archive -- see aggregate fields below and results/sql/price_conflict_summary.csv / price_conflict_spread_distribution.csv for the full aggregate breakdown.",
+    "conflicting_pairs_aggregate": {
+      "n_conflicting_pairs": 9,
+      "view_pair_combination_counts": {
+        "category+store": 5,
+        "keyword+store": 4
+      },
+      "spread_pct_min": 1.8,
+      "spread_pct_max": 12.5,
+      "spread_pct_mean": 7.4
+    }
+  },
+  "total_identifiable_observations_sum_of_views": 2996,
+  "total_distinct_shop_product_pairs_union": 2727,
+  "total_distinct_shops_union": 968
+}
