@@ -223,8 +223,8 @@ def main():
                 "min_pct": float(disc_pct.min()) if disc_pct.notna().any() else None,
                 "max_pct": float(disc_pct.max()) if disc_pct.notna().any() else None,
                 "n_diff_gt_1pt_vs_implied": n_diff_gt_1pt,
-                # Denominator is populated discount rows, NOT total identifiable rows —
-                # the two denominators give materially different percentages and must
+                # Denominator is populated discount rows, not total identifiable rows.
+                # The two denominators give materially different percentages and must
                 # not be conflated (Stage 1 review correction).
                 "pct_diff_gt_1pt_of_populated": (
                     round(100 * n_diff_gt_1pt / n_populated, 1) if n_populated else None

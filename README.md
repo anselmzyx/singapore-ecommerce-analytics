@@ -67,15 +67,17 @@ Both screenshots show aggregate figures only, with no row-level listing data. I'
 publishing them here as original analytical outputs of this project.
 
 The PBIX file itself is **not** published (see Licensing below). The model, DAX, and
-page-by-page build instructions needed to reproduce the report are documented in full
-under `docs/POWER_BI_MODEL_GUIDE.md`, `docs/POWER_BI_DAX_GUIDE.md`, and
-`docs/POWER_BI_DASHBOARD_BUILD_GUIDE.md`.
+page-by-page build instructions are documented under `docs/POWER_BI_MODEL_GUIDE.md`,
+`docs/POWER_BI_DAX_GUIDE.md`, and `docs/POWER_BI_DASHBOARD_BUILD_GUIDE.md`. The build
+guide was written before the dashboard was built, and a short "Final as-built
+dashboard" section at the top of it documents a few adjustments made during
+construction, like one KPI card and two chart-label fields that ended up different
+from the original plan.
 
 ## Key findings
 
-All figures below are read directly from `results/sql/` (Stage 3, DuckDB) and reconciled
-against the dashboard screenshots above. None of this is estimated or reconstructed from
-memory.
+All figures below are supported by the published SQL outputs in `results/sql/` (Stage 3,
+DuckDB) and match what's shown in the dashboard screenshots above.
 
 - I found **2,727** distinct listings sampled across 968 distinct shops (2,996 total
   observations across the three collection views, with 63 listings appearing in more
@@ -88,8 +90,9 @@ memory.
   at most SGD 0.12. Medians are robust to this anomaly; means are not.
 - The recorded "discount" field disagrees with the price-implied discount in **19.2%**
   of Category-view rows and **10.4%** of Keyword-view rows that have a testable
-  discount (both values available). The Store view's 312 "-1" reference-price rows are
-  excluded from testing as sentinel values, not treated as a real discount of 0%.
+  discount (both values available), or **10.3%** across all testable rows overall.
+  The Store view's 312 "-1" reference-price rows are excluded from testing as
+  sentinel values, not treated as a real discount of 0%.
 - **56.7%** of sampled Keyword-view search results are flagged sponsored, and
   sponsorship share varies widely by search term.
 - Recorded ratings cluster tightly and high (median 4.92 among 2,713 rated
@@ -182,9 +185,8 @@ of it (see Licensing). To reproduce the pipeline locally:
    `docs/POWER_BI_DASHBOARD_BUILD_GUIDE.md` in Power BI Desktop to recreate both pages
    from the `data/processed/listings_observations.csv` produced in step 3.
 
-Every number in `docs/` and in the dashboard traces back to a specific file in
-`results/` produced by these scripts. Nothing in this project's findings was typed in
-by hand without a corresponding executed output.
+Every number in `docs/` and in the dashboard traces back to a specific file produced by
+these scripts in `results/`.
 
 ## Attribution and licensing
 

@@ -1,12 +1,14 @@
 """
 Produces a sanitised, aggregate-only copy of results/stage1/summary.json for inclusion
-in ChatGPT review ZIPs. The original local diagnostic file is never modified.
+in review archives shared outside this local project. The original local diagnostic
+file is never modified.
 
 results/stage1/summary.json's cross_view_price_check.conflicting_pairs field records, for
 each of the 9 cross-view price conflicts, the shop_id, product_id, and the price recorded
 in each view -- i.e. identifiable row-level third-party records with prices attached.
 That level of detail is appropriate for local diagnosis but not for a redistributed
-review archive while the dataset's reuse rights remain unresolved (see CLAUDE.md).
+review archive while the dataset's reuse rights remain unresolved (see
+docs/STAGE1_DATASET_REVIEW.md for the dataset's licensing status).
 
 This script replaces conflicting_pairs with an aggregate-only summary (count, view-pairs
 involved, min/max/mean spread) -- the same facts already reported in

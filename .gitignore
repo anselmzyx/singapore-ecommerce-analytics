@@ -1,23 +1,26 @@
-# Portfolio 04 — Singapore E-commerce Analytics
+# Portfolio 04: Singapore E-commerce Analytics
 # Third-party source data and processed row-level derivatives: dataset license is
-# "Unknown" (see docs/STAGE1_DATASET_REVIEW.md SS6) -- never publish these.
+# "Unknown" (see docs/STAGE1_DATASET_REVIEW.md) -- never publish these.
 data/raw/
 data/processed/
 
 # Power BI report files: embed a copy of the processed (third-party-derived) data.
-# Kept local-only -- see docs/STAGE5_HANDOFF.md SS9 and docs/STAGE6_PUBLICATION_PLAN.md.
+# Kept local-only; the data model and dashboard construction are documented in
+# docs/POWER_BI_MODEL_GUIDE.md, docs/POWER_BI_DAX_GUIDE.md, and
+# docs/POWER_BI_DASHBOARD_BUILD_GUIDE.md.
 dashboard/*.pbix
 dashboard/*.pbip
 dashboard/*.Report/
 dashboard/*.SemanticModel/
 
-# Unredacted diagnostic file containing 9 identifiable shop/product/price records
-# (see docs/STAGE2_CORRECTIONS_ADDENDUM.md, correction C). The sanitised copy
-# (results/stage1/summary_sanitized.json) is the one intended for sharing/publication.
+# Unredacted diagnostic file containing identifiable shop/product/price records.
+# The sanitised copy (results/stage1/summary_sanitized.json) is the one intended
+# for sharing and publication; see docs/STAGE1_DATASET_REVIEW.md for the dataset's
+# licensing status.
 results/stage1/summary.json
 
-# Private review ZIPs sent to ChatGPT for stage-by-stage review -- not part of the
-# public repository.
+# Internal review archives from this project's development process, not part of
+# the public repository.
 handoff/
 
 # Python virtual environment and caches
