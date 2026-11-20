@@ -47,3 +47,17 @@ Thumbs.db
 *.tmp
 *.temp
 .ipynb_checkpoints/
+
+# Local AI-assistant instructions and working notes (not part of the project)
+CLAUDE.md
+.claude/
+
+# Internal stage handoff, manifest and planning documents from the development process
+docs/STAGE*_HANDOFF.md
+docs/STAGE*_MANIFEST.txt
+docs/STAGE*_COMPLETION_REPORT.md
+docs/STAGE*_CORRECTIONS_ADDENDUM.md
+docs/STAGE6_PUBLICATION_PLAN.md
+
+# Private working notebook: its saved outputs may contain third-party row-level data
+notebooks/01_ecommerce_eda.ipynb
