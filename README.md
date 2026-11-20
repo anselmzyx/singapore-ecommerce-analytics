@@ -44,14 +44,14 @@ marketplace (full scope and sampling bias discussion in `docs/STAGE1_DATASET_REV
 
 | Stage | Tooling | Output |
 |---|---|---|
-| 1. Acquisition and inspection | Python, pandas, openpyxl | I independently verified every publisher-reported figure directly from the raw files |
+| 1. Acquisition and inspection | Python, pandas, openpyxl | The publisher's headline counts (rows, listings, shops, per-view totals) reproduced directly from the raw files |
 | 2. Cleaning and EDA | Python, pandas, matplotlib, Jupyter | Observation-level and unique-listing cleaned datasets, plus 7 EDA charts |
-| 3. Business analysis | DuckDB SQL | 7 business questions, executed and reconciled against Stages 1 and 2 with zero discrepancies |
-| 4 to 5. Dashboard | Power BI Desktop | A single-table model, 15+ DAX measures, and a two-page QHD (2560x1440) report, built manually and verified against the SQL outputs |
+| 3. Business analysis | DuckDB SQL | 7 business questions; the runner automatically checks row, listing and shop totals against Stages 1 and 2 |
+| 4 to 5. Dashboard | Power BI Desktop | A single-table model, 15+ DAX measures, and a two-page QHD (2560x1440) report, built manually; displayed values compared with the SQL outputs |
 
 Each stage's methodology, corrections, and validation results are documented in full
-under `docs/` (see Repository structure below). I reviewed each stage independently
-before moving on to the next.
+under `docs/` (see Repository structure below). What was and wasn't verified, and by
+whom, is summarised in "How the results were checked" below.
 
 ## Dashboard
 
@@ -59,20 +59,30 @@ before moving on to the next.
 
 ![Product Pricing & Promotions dashboard page](dashboard/screenshots/01_pricing_promotions.png)
 
+The four headline cards are labelled "(All Views)" where they pool the Category,
+Keyword and Store samples. The median price uses one representative observation per
+distinct listing (the latest crawl), and the discount inconsistency rate is 220
+mismatches among 2,141 testable observations. Neither is an estimate for the whole
+Shopee marketplace. The category chart and the S$999 sensitivity cards use the Category
+view only.
+
 ### Page 2: Seller Landscape, Ratings & Sponsorship
 
-![Seller Landscape, Ratings & Sponsorship dashboard page](dashboard/screenshots/02_seller_landscape_ratings_sponsorship.png)
+![Seller Landscape, Ratings & Sponsorship dashboard page](dashboard/screenshots/02_seller_landscape_ratings_and_sponsorships.png)
 
-Both screenshots show aggregate figures only, with no row-level listing data. I'm
-publishing them here as original analytical outputs of this project.
+Both screenshots show aggregate figures only (Page 2 includes store-level aggregates
+for the 12 sampled stores), with no row-level listing data. I'm publishing them here as
+original analytical outputs of this project.
+
+Cross-visual interactions are switched off on both pages, so clicking a bar, row or
+segment doesn't filter any other visual. This stops figures from different sampling
+views being filtered against each other.
 
 The PBIX file itself is **not** published (see Licensing below). The model, DAX, and
 page-by-page build instructions are documented under `docs/POWER_BI_MODEL_GUIDE.md`,
-`docs/POWER_BI_DAX_GUIDE.md`, and `docs/POWER_BI_DASHBOARD_BUILD_GUIDE.md`. The build
-guide was written before the dashboard was built, and a short "Final as-built
-dashboard" section at the top of it documents a few adjustments made during
-construction, like one KPI card and two chart-label fields that ended up different
-from the original plan.
+`docs/POWER_BI_DAX_GUIDE.md`, and `docs/POWER_BI_DASHBOARD_BUILD_GUIDE.md`. Each guide
+opens with a status section separating the original design from the final as-built
+dashboard, and listing what has and hasn't been independently verified.
 
 ## Key findings
 
@@ -82,17 +92,26 @@ DuckDB) and match what's shown in the dashboard screenshots above.
 - I found **2,727** distinct listings sampled across 968 distinct shops (2,996 total
   observations across the three collection views, with 63 listings appearing in more
   than one view).
-- Median listing price is **SGD 12.90** across all sampled listings. By category,
-  medians range from SGD 2.53 (Housekeeping) to SGD 11.56 (Body lotion).
-- **Suspected, unconfirmed price-ceiling pattern at SGD 999:** excluding the 4
-  Category-view observations recorded at exactly SGD 999 drops the Category-view mean
-  price from SGD 15.58 to SGD 11.62 (a 25.4% drop), while shifting category medians by
-  at most SGD 0.12. Medians are robust to this anomaly; means are not.
+- The median price is **SGD 12.90** across the combined sample (one representative
+  observation per distinct listing, pooled over the Category, Keyword and Store views).
+  Because the three views were sampled differently, this isn't a typical Shopee price:
+  the Category view's own median is SGD 6.41, and category medians range from SGD 2.53
+  (Housekeeping) to SGD 11.56 (Body lotion).
+- **Suspected, unconfirmed anomaly at SGD 999:** excluding the 4 Category-view
+  observations recorded at exactly SGD 999 drops the Category-view mean price from
+  SGD 15.58 to SGD 11.62 (a 25.4% drop), while shifting category medians by at most
+  SGD 0.12. Medians are robust to this anomaly; means are not. The sensitivity check
+  covers the Category view only. Across all three views there are 24 observations at
+  SGD 999 (4 Category, 1 Keyword, 19 Store; 22 distinct listings) and none between
+  SGD 900 and 998. Whether this is a platform cap, a placeholder or genuine pricing is
+  unknown.
 - The recorded "discount" field disagrees with the price-implied discount in **19.2%**
   of Category-view rows and **10.4%** of Keyword-view rows that have a testable
-  discount (both values available), or **10.3%** across all testable rows overall.
-  The Store view's 312 "-1" reference-price rows are excluded from testing as
-  sentinel values, not treated as a real discount of 0%.
+  discount (both values available), and 0.0% of the 687 testable Store-view rows. The
+  pooled figure is **10.3%** (220 of 2,141 testable observations); the Store view's
+  zero mismatches pull it down, so it describes this mix of views rather than the
+  marketplace. The Store view's 312 "-1" reference-price rows are excluded from testing
+  as sentinel values, not treated as a real discount of 0%.
 - **56.7%** of sampled Keyword-view search results are flagged sponsored, and
   sponsorship share varies widely by search term.
 - Recorded ratings cluster tightly and high (median 4.92 among 2,713 rated
@@ -106,8 +125,8 @@ or satisfaction data.
 
 ## Data-quality methodology and limitations
 
-- I independently reproduced every publisher-reported figure in the source dataset's
-  documentation from the raw files before relying on it (Stage 1).
+- I reproduced the publisher's headline figures (row, listing, shop and per-view
+  counts) from the raw files before relying on the data (Stage 1).
 - Identifiers (`shop_id`, `product_id`, `listing_key`) are retained as strings
   throughout to avoid precision loss. I used a documented, deterministic rule (latest
   observed `crawl_time`) wherever a single "representative" price per listing is
@@ -122,6 +141,28 @@ or satisfaction data.
 - Main limitations: a narrow, curated sample (6 categories, 17 keywords, 12 stores), a
   single-day snapshot, an unresolved and suspected price-recording anomaly at SGD 999,
   and dataset reuse-licensing uncertainty (see below).
+
+### How the results were checked
+
+- **Automated, in the scripts:** a SHA-256 check of the raw files (the cleaning script
+  stops if they changed); Stage 2 totals for rows, listings, shops and excluded
+  incomplete rows, plus conversion-failure counts, recorded in
+  `results/stage2/cleaning_validation_report.json` (all zero); and a Stage 3 runner check
+  of total observations, distinct listings and shops, the cross-view overlap total, the
+  discount-status total and the Category-view listing count (the runner stops if one
+  fails). These are consistency checks on totals. They don't re-derive each price,
+  discount, rating or sponsorship statistic.
+- **Independent re-run (20 November 2026):** a final review re-ran cleaning and the
+  seven SQL queries from the raw Kaggle files. Outputs matched the published results
+  (only the row order of tied values and one last-decimal float differed). It also
+  recomputed the headline figures separately in pandas: median prices, the 999
+  sensitivity, discount mismatch rates, sponsorship share and ratings. They matched.
+- **Dashboard:** displayed values match the SQL outputs. I compared six DAX formulas in
+  Power BI Desktop against the documentation (listed in the DAX guide), and configured
+  the interactions manually. A read-only check of the saved report file confirmed the
+  intended interaction settings.
+- **Not done:** the other DAX measures weren't inspected, and the interactions weren't
+  click-tested by the reviewers. The PBIX isn't published, so readers can't check it.
 
 Full stage-by-stage methodology, every correction applied during independent review,
 and every validation check are documented under `docs/`.

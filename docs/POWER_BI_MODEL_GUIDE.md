@@ -1,7 +1,26 @@
-# Power BI Model Guide: Stage 4
+# Power BI Model Guide
 
-Preparation only. No PBIX/PBIP file has been created, and Power BI has not been opened
-as part of this stage. This guide is for manual construction in Stage 5.
+## Status of this document (updated 20 November 2026)
+
+The dashboard is built. This guide began as the Stage 4 design, written before any
+PBIX existed, and the model design below is that original specification. Its wording
+was not changed when the dashboard was finished.
+
+1. **Original design.** A single imported table, `Observations`, built from
+   `data/processed/listings_observations.csv`, with no relationships.
+2. **Final as-built.** The saved PBIX's model diagram lists a single table named
+   `Observations`, consistent with the design. Additions to the final model are
+   described in `docs/POWER_BI_DAX_GUIDE.md` ("Stage 5 as-built model additions").
+3. **Verified independently (static, read-only).** The diagram layout shows one table;
+   the visual field bindings are consistent with the single-table design.
+4. **Owner-reported.** `RepresentativeRank` (the calculated column described below)
+   was compared with this guide in Power BI Desktop on 20 November 2026 and matched.
+5. **Not verified.** Column types, hidden fields and the remaining model internals
+   can't be read outside Power BI Desktop, because the data model in the PBIX is
+   compressed. The PBIX isn't published (dataset licensing).
+
+Where the text below says no PBIX exists or Power BI hasn't been opened, that is
+historical wording from the design stage.
 
 ## Model shape: single table, no relationships
 

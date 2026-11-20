@@ -1,10 +1,40 @@
-# Power BI DAX Guide: Stage 4
+# Power BI DAX Guide
 
-Preparation only. These measures have not been entered into Power BI or executed.
+## Status of this document (updated 20 November 2026)
+
+The dashboard is built. This guide began as the Stage 4 specification, written before
+any measure existed, and the measure definitions below are that original specification.
+Its wording was not changed when the dashboard was finished. What is known about the
+final build:
+
+1. **Original design.** The 15 core and 2 supporting measures below, with their
+   validation targets taken from `results/sql/` (Stage 3).
+2. **Final as-built.** The two-page report uses these measures plus three additions
+   (`Store-View Shops`, `Discount Status Label`, `Sponsored Status`; see the as-built
+   section at the end). The final card and chart titles differ from measure names; the
+   mapping is in the as-built section.
+3. **Verified independently (static, read-only).** The visual field bindings in the
+   saved report definition confirm which measures and columns each visual uses. The
+   displayed values in both screenshots match the Stage 3 SQL outputs.
+4. **Owner-reported manual comparison.** On 20 November 2026 the project owner opened
+   the PBIX in Power BI Desktop and compared six formulas against this guide:
+   `Median Representative Listing Price`, `Discount Inconsistency Rate`,
+   `Mean Observed Price`, `Mean Observed Price Excl. SGD 999`,
+   `Testable Discount Count` and `RepresentativeRank`. All six matched the
+   documented formulas. This is a manual comparison of six formulas, not an extraction
+   of the whole model, and it doesn't cover the other measures.
+5. **Not verified.** The formulas of the remaining measures, including the three
+   as-built additions, have not been independently inspected: the compressed
+   `DataModel` in the PBIX can't be read outside Power BI Desktop.
+   `Median Implied Discount` is specified below, but its presence in the final model
+   hasn't been confirmed. The PBIX isn't published (dataset licensing), so readers
+   can't check any of this directly.
+
+Where this guide says a measure "has not been executed" or lists a "validation
+target", that is historical design wording. Read the status above for the final state.
+
 Every "validation target" below is the already-executed SQL result from
-`results/sql/` (Stage 3, corrected), which these measures are designed to reproduce
-once built. Flag any mismatch found in Stage 5 for investigation rather than assuming
-the DAX is correct.
+`results/sql/` (Stage 3, corrected) that the measure is designed to reproduce.
 
 All measures assume the single table `Observations` from `docs/POWER_BI_MODEL_GUIDE.md`.
 
@@ -295,17 +325,16 @@ they appear.**
 | Mean Observed Price | (built-in filter: Category view only) | SGD 15.58 | price_999_sensitivity_overall.csv |
 | Mean Observed Price Excl. SGD 999 | (built-in filter: Category view only) | SGD 11.62 | price_999_sensitivity_overall.csv |
 
-## What cannot be validated without running Power BI
+## What could not be validated before the dashboard was built (historical note)
 
-Everything above is validated against the SQL outputs that these DAX expressions
-are *designed* to reproduce; the DAX itself hasn't been executed. Flag for Stage 5
-specifically: the exact behavior of `RepresentativeRank` as a calculated column
-(whether Power BI's `EARLIER` resolves as expected inside this specific table
-shape), whether `DIVIDE`'s `BLANK()` handling displays as expected in card visuals
-(versus showing `0`), and whether Power Query's type-conversion step correctly
-reads `sponsored`/`variant_comparability_uncertain` as True/False (text
-`"True"`/`"False"` in the source CSV) without manual intervention. These should be
-confirmed visually once the PBIX is built, not assumed from this document.
+When this guide was written, the DAX hadn't been run. The open questions were the exact
+behaviour of `RepresentativeRank` as a calculated column (whether Power BI's `EARLIER`
+resolves as expected in this table), whether `DIVIDE`'s `BLANK()` handling displays as
+expected in card visuals, and whether Power Query reads `sponsored` and
+`variant_comparability_uncertain` as True/False. Once the dashboard was built, the
+displayed KPI and chart values matched the SQL targets in both screenshots, which
+resolves these for the visuals shown. The owner's manual comparison of
+`RepresentativeRank` (see the status section) also found it matched this guide.
 
 ## Stage 5 as-built model additions (confirmed by Stage 6 read-only PBIX inspection)
 
@@ -344,11 +373,27 @@ enough to tell the two apart without opening Power BI).
 in the model (it's bound on the private Validation page) but isn't shown as a
 headline KPI on either published page.
 
-**Cannot be confirmed from this read-only inspection:** whether the
-`RepresentativeRank` calculated column and the `Median Implied Discount` measure
-(both specified in this guide and the model guide) still exist in the final
-semantic model. Neither is bound to any visual on any of the three pages, which is
-consistent with either (a) still present but unused in any visual, which is
-expected for `RepresentativeRank` since it was always meant to be hidden and used
-only inside another measure's filter, or (b) removed. Opening the PBIX in Power BI
-would resolve this; that hasn't been done here.
+**Final card and chart labels (display text only; the measures and their DAX are
+unchanged).** Updated 20 November 2026 so pooled figures say what they pool:
+
+| Displayed label | Measure used | Value |
+|---|---|---|
+| Distinct Listings | `Distinct Listings` | 2,727 |
+| Distinct Shops | `Distinct Shops` | 968 |
+| Median Price (All Views) | `Median Representative Listing Price` | S$12.90 |
+| Discount Inconsistency (All Views) | `Discount Inconsistency Rate` | 10.3% (220 of 2,141 testable) |
+| Mean Price (Category View) | `Mean Observed Price` | S$15.58 |
+| Mean Price Excl. S$999 (Category View) | `Mean Observed Price Excl. SGD 999` | S$11.62 |
+
+Chart titles: "Median Price by Category (Category View)" and "Discount Status (All Views)",
+the latter with the subtitle "Mismatch among testable rows: Category 19.2% | Keyword
+10.4% | Store 0.0%". The S$999 sensitivity cards deliberately cover only the four
+Category-view observations at S$999; the dataset holds 24 across all three views (see
+the README).
+
+**Status of `RepresentativeRank` and `Median Implied Discount`.** Neither is bound to
+any visual, so the read-only inspection of visual bindings couldn't show whether they
+still exist. The owner's manual check on 20 November 2026 found `RepresentativeRank`
+present and matching this guide, which is consistent with its role as a hidden column
+used inside `Median Representative Listing Price`. Whether `Median Implied Discount`
+still exists in the final model remains unconfirmed.

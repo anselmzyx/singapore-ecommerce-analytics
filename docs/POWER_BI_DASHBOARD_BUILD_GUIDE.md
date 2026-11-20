@@ -1,13 +1,24 @@
 # Power BI Dashboard Build Guide: Stage 4
 
-**This document is the original Stage 4 construction plan, written before the
-dashboard existed.** The report has since been built. Most of this plan matches what
-was actually built, but it is a specification, not a guaranteed description of the
-final result. See the "Final as-built dashboard" section immediately below for what
-the published report actually contains, confirmed from the dashboard screenshots and
-a read-only inspection of the PBIX; everything from "Page 1" onward after that
-section is the historical plan, kept for its design reasoning and because most of it
-still holds.
+**This document combines the final as-built description (immediately below) with the
+original Stage 4 construction plan, written before the dashboard existed.** The report
+has since been built. Most of the plan matches what was built, but it is a
+specification, not a description of the final result. Where the two differ, the
+as-built section wins. Everything from "Original Stage 4 construction plan" onward is
+the historical plan, kept for its design reasoning. In particular, its "Edit
+Interactions" tables, its Page 2 design and its chart and card names are superseded.
+
+**What the as-built section rests on (updated 20 November 2026):**
+- *Verified independently, read-only:* the two current screenshots; the page, visual,
+  field-binding and cross-visual interaction definitions in the saved PBIX's report
+  layer (static JSON, nothing opened or saved in Power BI); and the match between the
+  screenshot values and the SQL outputs.
+- *Owner-reported:* the final labels and titles, and the interaction settings, were
+  set manually in Power BI Desktop. Six DAX formulas were compared against
+  `docs/POWER_BI_DAX_GUIDE.md` and matched (see that guide).
+- *Not verified:* interaction behaviour wasn't click-tested by anyone but the owner;
+  most DAX formulas haven't been independently inspected; the compressed data model
+  can't be read outside Power BI Desktop; the PBIX isn't published.
 
 Canvas: **2560 x 1440 px (16:9 QHD)** for both pages, confirmed accurate in the final
 report. Coordinates throughout the historical plan below were always suggested
@@ -19,11 +30,13 @@ re-verified against the final visual placement.
 ## Final as-built dashboard
 
 Confirmed from `dashboard/screenshots/01_pricing_promotions.png` and
-`dashboard/screenshots/02_seller_landscape_ratings_sponsorship.png`, plus a read-only
-inspection of the PBIX's page and visual definitions (no PBIX content was changed or
-saved). Visual coordinates, conditional-formatting thresholds, slicer behavior, and
-DAX expressions beyond what's already documented in `docs/POWER_BI_DAX_GUIDE.md`
-aren't independently confirmable this way and aren't claimed here.
+`dashboard/screenshots/02_seller_landscape_ratings_and_sponsorships.png` (the Page 2
+file replaced an earlier version named `02_seller_landscape_ratings_sponsorship.png`,
+which is no longer in the repository), plus a read-only inspection of the PBIX's page
+and visual definitions (no PBIX content was changed or saved). Visual coordinates,
+conditional-formatting thresholds and DAX expressions beyond what's documented in
+`docs/POWER_BI_DAX_GUIDE.md` aren't independently confirmable this way and aren't
+claimed here.
 
 **Pages.** Two published pages, both built at 2560x1440 as planned, plus a third,
 private "Validation" page (1920x1080, 4 KPI cards only) that isn't part of the
@@ -31,20 +44,26 @@ published dashboard and doesn't appear in either screenshot.
 
 ### Page 1: "Product Pricing & Promotions"
 
-- Four KPI cards: Distinct Listings 2,727; Distinct Shops 968; Median Representative
-  Listing Price S$12.90; and **Discount Inconsistency Rate 10.3%**. The fourth card
-  is a confirmed change from the original plan below, which specified "Listings at
-  SGD 999" there instead (see `docs/POWER_BI_DAX_GUIDE.md`, "Stage 5 as-built model
-  additions," for that correction).
-- "Median Listing Price by Category": a horizontal bar chart, matching the original
-  plan.
-- "Discount Consistency by Status": a bar chart showing counts for four statuses,
+- Four KPI cards, labelled Distinct Listings 2,727; Distinct Shops 968; **Median
+  Price (All Views) S$12.90**; and **Discount Inconsistency (All Views) 10.3%**. The
+  median is the pooled median of one representative observation per distinct listing
+  across the Category, Keyword and Store views. The 10.3% is 220 inconsistent
+  observations among 2,141 testable ones, pooled across the same three views. Neither
+  is an estimate for the whole marketplace. The fourth card is a confirmed change from
+  the original plan below, which specified "Listings at SGD 999" there (see
+  `docs/POWER_BI_DAX_GUIDE.md`, "Stage 5 as-built model additions").
+- "Median Price by Category (Category View)": a horizontal bar chart, matching the
+  original plan.
+- "Discount Status (All Views)": a bar chart showing counts for four statuses,
   Consistent 1,921, No discount recorded 543, Invalid/missing reference 312, and
-  Inconsistent 220.
-- "Price Outlier Sensitivity Analysis": two cards, Mean Observed Price S$15.58 and
-  Mean Observed Price Excl. SGD 999 S$11.62, with a callout reading "25.4% lower
-  mean" and the required disclosure that S$999 is a suspected price-ceiling anomaly,
-  not confirmed censoring.
+  Inconsistent 220, with the subtitle "Mismatch among testable rows: Category 19.2% |
+  Keyword 10.4% | Store 0.0%".
+- "Price Outlier Sensitivity Analysis": two cards, Mean Price (Category View) S$15.58
+  and Mean Price Excl. S$999 (Category View) S$11.62, with a callout reading "25.4%
+  lower mean" for excluding four Category-view S$999 observations, and the required
+  disclosure that S$999 is a suspected price-ceiling anomaly, not confirmed censoring.
+  This check covers the Category view only. All three views hold 24 observations at
+  S$999 (4 Category, 1 Keyword, 19 Store), counted from the local source data.
 - A source attribution footer naming Easy Data and Kaggle, the 18 August 2025
   collection date, and a note that the sample isn't representative of the full
   marketplace.
@@ -64,6 +83,27 @@ published dashboard and doesn't appear in either screenshot.
 - "Sponsored vs Non-Sponsored by Keyword": a 100%-stacked column chart across all 17
   sampled keywords.
 - The same source attribution footer as Page 1.
+
+### Final cross-visual interactions (as built)
+
+All cross-visual filtering is switched off, so no visual changes any other. This stops
+figures from different sampling populations being filtered against each other.
+Configured manually in Power BI Desktop (owner-reported). A read-only check of the
+saved report definition on 20 November 2026 found an explicit "no filter" setting for
+every pair below. This is a static check of the settings, not a click test of the
+behaviour in Power BI.
+
+| Page | Selecting | Does not affect |
+|---|---|---|
+| 1 | A category-price bar | The four headline KPIs, the discount-status chart, the two price-sensitivity cards |
+| 1 | A discount-status bar | The four headline KPIs, the category-price chart, the two price-sensitivity cards |
+| 2 | A store-table row | The four KPI cards, the category-rating chart, the keyword-sponsorship chart |
+| 2 | A category-rating bar | The other visuals |
+| 2 | A keyword-sponsorship segment | The other visuals |
+
+This final configuration supersedes the "Edit Interactions" tables in the historical
+plan below, which kept some filtering (for example a Category slicer and linked store
+visuals). Neither page has a slicer in the final report.
 
 ### Confirmed model additions beyond the original plan
 
